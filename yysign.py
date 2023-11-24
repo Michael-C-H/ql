@@ -25,8 +25,9 @@ def login_sign ():#line:17
     print ('开始签到：签到结果 '+O0O0O000OOOO0OOO0 .text )#line:33
     
     print ('尝试服务器7天续期！')
-    renew_body = {"duration_day" : 7,"product_id" : yyproduct_id,"product_type" : "rvh"}
-    OOOO00OO000O0O000 =O00OOO00O0OO0OO00 .post ('https://api.v2.rainyun.com/product/point_renew',headers =O000O0OOOO00OOOOO ,data =renew_body)
+    renew_body = {"duration_day" : 7,"product_id" : int(yyproduct_id),"product_type" : "rvh"}
+    # print(renew_body)
+    OOOO00OO000O0O000 =O00OOO00O0OO0OO00 .post ('https://api.v2.rainyun.com/product/point_renew',headers =O000O0OOOO00OOOOO ,data =json.dumps(renew_body))
     print(json .loads (OOOO00OO000O0O000 .text )['message'])
     # print ('尝试20次服务器兑换！')#line:35
     # for OO00000OO0OO0000O in range (200):#line:36
